@@ -1,0 +1,25 @@
+# Configuration for MCP Hyperparameters
+# --- Positive Cache Configuration ---
+positive:
+  enabled: True
+  align_shot: 10
+  entropy_shot: 10
+  alpha: 5.5
+  beta: 8.0 
+  
+# --- Negative Cache Configuration ---
+negative:
+  enabled: True
+  shot_capacity: 3
+  alpha: 0.117
+  beta: 1.0
+  entropy_threshold:
+    lower: 0.2
+    upper: 0.5 
+  mask_threshold:
+    lower: 0.03
+    upper: 1.0
+
+learning_rate:
+  text: 0.00006
+  image: 0.00006
