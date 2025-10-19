@@ -1,4 +1,4 @@
-# MCP: Multi-Cache Enhanced Prototype Learning for Test-Time Generalization of Vision-Language Models
+# [ICCV2025]MCP: Multi-Cache Enhanced Prototype Learning for Test-Time Generalization of Vision-Language Models
 
 > **Official Implementation of "MCP: Multi-Cache Enhanced Prototype Learning for Test-Time Generalization of Vision-Language Models" (ICCV 2025)**  
 > 🔗 Read our paper: [arxiv](https://arxiv.org/pdf/2508.01225) 
@@ -18,7 +18,7 @@ MCP introduces a multi-cache mechanism that dynamically maintains prototype repr
 ## Installation
 
 ```bash
-git clone https://github.com/CenturyChen/ICCV2025-MCP.git
+git clone https://github.com/CenturyChen/MCP.git
 cd MCP
 conda create -n mcp python=3.10
 conda activate mcp
