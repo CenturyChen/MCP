@@ -10,23 +10,27 @@
 MCP introduces a multi-cache mechanism that dynamically maintains prototype representations during test-time adaptation (TTA) of vision-language models (VLMs), enabling robust generalization under distribution shifts.
 
 <p align="center">
-  <img src="assets/framework.png" width="700">
+  <img src="docs/mcp.png" width="700">
 </p>
----
+
+> Abstract: In zero-shot setting, test-time adaptation adjusts pre-trained models using unlabeled data from the test phase to enhance performance on unknown test distributions. Existing cache-enhanced TTA methods rely on a low-entropy criterion to select samples for prototype construction, assuming intra-class compactness. However, low-entropy samples may be unreliable under distribution shifts, and the resulting prototypes may not ensure compact intra-class distributions. This study identifies a positive correlation between
+cache-enhanced performance and intra-class compactness. Based on this observation, we propose a Multi-Cache enhanced Prototype-based Test-Time Adaptation (MCP) featuring three caches: an entropy cache for initializing prototype representations with low-entropy samples, an align cache for integrating visual and textual information to achieve compact intra-class distributions, and a negative cache for prediction calibration using high-entropy samples. We further developed MCP++, a framework incorporating cross-modal prototype alignment and residual learning, introducing prototype residual fine-tuning. Comparative and ablation experiments across 15 downstream tasks demonstrate that the proposed method and framework achieve state-of-the-art generalization performance.
 
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/MCP.git
+git clone https://github.com/CenturyChen/ICCV2025-MCP.git
 cd MCP
 conda create -n mcp python=3.10
 conda activate mcp
+conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=11.3 -c pytorch
 pip install -r requirements.txt
 ```
 
 ## Dataset
 
-📦 To set up all required datasets, kindly refer to the guidance in DATASETS.md, which incorporates steps for two benchmarks.
+📦 For dataset preparation, please follow the instructions provided in [DATASETS.md](https://github.com/kdiAAA/TDA/blob/main/docs/DATASETS.md).  
+Our implementation follows the same dataset setup protocol as **TDA**, covering the two standard benchmarks used in test-time adaptation.
 
 ## Run MCP
 ### OOD Benchmark
