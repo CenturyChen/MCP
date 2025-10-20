@@ -44,11 +44,11 @@ bash ./scripts/run_ood_benchmark_vit.sh
 ### Cross-Domain Benchmark
 - ResNet50: Run MCP on the Cross-Domain Benchmark using the ResNet50 model:
 ```bash
-bash ./scripts/run_ood_benchmark_rn50.sh 
+bash ./scripts/run_cd_benchmark_rn50.sh 
 ```
 - ViT-B/16: Run MCP on the Cross-Domain Benchmark using the ViT-B/16 model:
 ```bash
-bash ./scripts/run_ood_benchmark_vit.sh 
+bash ./scripts/run_cd_benchmark_vit.sh 
 ```
 
 ## Citation
